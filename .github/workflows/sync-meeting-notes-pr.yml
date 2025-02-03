@@ -26,7 +26,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: "Checkout PR"
-        run: hub pr checkout ${{ inputs.pr_number }}
+        run: gh pr checkout ${{ inputs.pr_number }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/setup-python@v4
