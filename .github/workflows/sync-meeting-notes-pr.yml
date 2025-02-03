@@ -93,7 +93,7 @@ jobs:
           if ! git diff --exit-code "$DOCPATH"; then
             git add "$DOCPATH"
             git commit -m "Update $DOCPATH"
-            git push origin ${{ github.head_ref || github.ref_name }}
+            git push origin $(git rev-parse --abbrev-ref HEAD)
           else
             echo "No changes detected."
           fi
