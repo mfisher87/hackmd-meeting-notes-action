@@ -31,7 +31,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/setup-python@v4
         with:
-          python-version: "3.9"
+          python-version: "3.x"
       - name: Set up dependencies
         run: |
           python3 -V
